@@ -1,6 +1,7 @@
 <?php
 include 'head.php';
 ?>
+<!-- <body> -->
 
 <!-- start -->
 <?php
@@ -10,6 +11,8 @@ $sql->check_sql();
 ?>
 
 
+    
+<!-- </body> -->
 <?php
 include 'foot.php';
 ?>
