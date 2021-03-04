@@ -2,8 +2,8 @@
 <html>
 <!-- head -->
 <?php
-include_once 'head.php';
-new Head_Set('first');
+include 'head.php';
+new Head_Set('./');
 
 ?>
 <!-- test DB -->

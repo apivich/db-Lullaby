@@ -1,8 +1,8 @@
 <!DOCTYPE html><!-- user -->
 <!-- head -->
 <?php
-include_once '../head.php';
-new Head_Set('second');
+include '../head.php';
+new Head_Set('../');
 ?>
 
 <body>
