@@ -7,18 +7,21 @@ class Data_Base
     private $password = "";
     private $dbname = "db_lullaby";
 
-    public function check_sql()
+    private function check_sql()
     {
-        $mysqli = mysqli_connect($this->hostname, $this->username, $this->password, $this->dbname);
-        if ($mysqli) {
-            echo ('<script>console.log("connect to MySQL 👍");</script>');
-        }
+        $mysqli = new mysqli($this->hostname, $this->username, $this->password, $this->dbname);
+        if ($mysqli->connect_errno) {
+            echo 'Failed to connect to MySQL:' . $mysqli->connect_error;
+            exit();
 
-        //error
-        if (!$mysqli) {
-            echo ('<script>console.log("Failed to connect to MySQL 😡");</script>');
+        } else {
+            return $mysqli;
         }
-
-        mysqli_close($mysqli);
+    }
+    public function field_count()
+    {
+        $mysqli = $this->check_sql();
+        $mysqli->query("SELECT * FORM $this->dbname");
+        echo $mysqli->affected_rows;
     }
 }

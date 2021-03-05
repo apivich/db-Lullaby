@@ -1,11 +1,11 @@
 <?php
 class Head_Set
 {
-    private function headset(string $back,)
+    private function headset(string $back, )
     {
         // head
         $html_head =
-        '<head>
+            '<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -21,18 +21,18 @@ class Head_Set
         </script>
 
         <!-- icon -->
-        <link rel="icon" href="'. $back.'img/pngegg.png" type="16x16">
+        <link rel="icon" href="' . $back . 'img/pngegg.png" type="16x16">
         <title>in เพลงกล่อมเด็ก</title>
         </head>';
         return $html_head;
     }
-    public function __construct(private string $check,)
+    public function __construct(private string $check, )
     {
         //in folder หน้าแรก
         if ($check == './') {
             $set = $this->headset('./');
         }
-        //First folder เรียกหน้าก่อนหน้า
+        //First folder เรียกหน้าfolderก่อนหน้า
         if ($check == '../') {
             $set = $this->headset('../');
         }
