@@ -4,8 +4,8 @@
 <?php
 include 'head.php';
 new Head_Set('./');
-
 ?>
+
 <!-- test DB -->
 <?php
 include 'fn/manage_dataBase.php';
@@ -16,7 +16,7 @@ $sql->field_count();
 <body>
     <!--nav-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand" href="index.php">Lullaby</a>
+        <a class="navbar-brand" href="./">Lullaby</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
             aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,7 @@ $sql->field_count();
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="user/register.php">register</a>
@@ -39,7 +39,7 @@ $sql->field_count();
     </nav>
 
     <!-- table -->
-    <div class="container">
+    <div class="container ">
         <div class="col">
             <h1 class="text-center">ตารางจัดการ</h1>
             <div class="shadow p-3 mb-5 bg-white rounded">

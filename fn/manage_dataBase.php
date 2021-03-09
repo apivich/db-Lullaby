@@ -18,7 +18,7 @@ class Data_Base
             return $mysqli;
         }
     }
-    public function field_count()
+    public function field_count() //ยัง
     {
         $mysqli = $this->check_sql();
         $mysqli->query("SELECT * FORM $this->dbname");

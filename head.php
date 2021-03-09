@@ -3,7 +3,6 @@ class Head_Set
 {
     private function headset(string $back, )
     {
-        // head
         $html_head =
             '<head>
         <meta charset="UTF-8">
@@ -33,8 +32,12 @@ class Head_Set
             $set = $this->headset('./');
         }
         //First folder เรียกหน้าfolderก่อนหน้า
-        if ($check == '../') {
+        else if ($check == '../') {
             $set = $this->headset('../');
+        }
+        else{
+            echo '<h1 style="color:red">ERROR only (./) or (../)</h1>';
+            exit();
         }
 
         echo $set;
